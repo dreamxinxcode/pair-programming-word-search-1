@@ -15,7 +15,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'FRANK')
+    ], 'FRANK');
 
     assert.isFalse(result);
   });
@@ -31,7 +31,23 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'SEINFELD')
+    ], 'SEINFELD');
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'E', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'L', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'O', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'N', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'M', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'U', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'S', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'K', 'Q', 'U', 'A', 'L'],
+    ], 'ELONMUSK');
 
     assert.isTrue(result);
   });
